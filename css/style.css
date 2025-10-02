@@ -1,0 +1,117 @@
+/* Importar Google Fonts (opcional, mas recomendado para um toque profissional) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+/* --- Variáveis de Cores (Definindo o Rosa) --- */
+:root {
+    --primary-color: #FF69B4; /* Rosa Vibrante (Pink) */
+    --secondary-color: #FF8CC6; /* Um rosa um pouco mais claro */
+    --text-dark: #333333;
+    --text-muted: #6c757d;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --success-color: #28a745; /* Mantendo o verde para botões de agendamento (contraste) */
+}
+
+/* --- Estilos Gerais --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color); /* Títulos em rosa */
+}
+
+a {
+    color: var(--primary-color); /* Links em rosa */
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-color); /* Links hover em rosa mais claro */
+    text-decoration: underline;
+}
+
+/* --- Navbar --- */
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Cor do ícone do menu sanduíche (Toggler Icon) */
+.navbar-toggler {
+    border-color: var(--primary-color);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 105, 180, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* --- Botões --- */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-success { /* Botão de Agendar no WhatsApp em Verde para dar destaque */
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* --- Seções Específicas --- */
+
+/* Cor dos preços e ícones que estavam em azul (text-danger) */
+.text-primary, .card-title, .text-danger, #contato h4 { 
+    color: var(--primary-color) !important; 
+}
+
+/* --- Galeria de Fotos (Para padronizar o tamanho) --- */
+.galeria-img {
+    height: 300px; /* Define a altura fixa para todas as imagens */
+    object-fit: cover; /* Garante que a imagem preencha e não distorça */
+    width: 100%; /* Garante que preencha a largura da coluna */
+}
+
+.hover-grow {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.hover-grow:hover {
+    transform: scale(1.03); /* Leve aumento ao passar o mouse */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Cor de fundo da legenda do 'DEPOIS' no modal do carrossel */
+.carousel-caption.bg-success { 
+    background-color: rgba(255, 105, 180, 0.75) !important; 
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #343a40; 
+    color: var(--white);
+}
